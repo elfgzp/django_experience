@@ -10,6 +10,11 @@ def fix_book_data(apps, schema_editor):
     for book in Book.objects.all():
         author, _ = Author.objects.get_or_create(name='%s author' % book.name)
         book.author = author
+        """
+        book.print_name()
+        book.print_class_name()
+        这样调用会报错
+        """
         book.save()
 
 

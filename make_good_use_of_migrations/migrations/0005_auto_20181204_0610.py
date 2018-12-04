@@ -5,7 +5,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('make_good_use_of_migrations', '0004_fix_book_data'),
     ]
@@ -14,6 +13,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='book',
             name='author',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='make_good_use_of_migrations.Author'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
+                                    to='make_good_use_of_migrations.Author'),
         ),
+        """
+        migrations.RunPython(xxx) 不要把数据处理放到模型变更中
+        """
     ]
