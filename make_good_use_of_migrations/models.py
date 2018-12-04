@@ -5,3 +5,4 @@ from django.db import models
 
 class Book(models.Model):
     name = models.CharField(max_length=32)
+    remark = models.CharField(max_length=32, null=True)
