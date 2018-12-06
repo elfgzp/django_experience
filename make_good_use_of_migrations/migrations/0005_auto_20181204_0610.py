@@ -16,7 +16,5 @@ class Migration(migrations.Migration):
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE,
                                     to='make_good_use_of_migrations.Author'),
         ),
-        """
-        migrations.RunPython(xxx) 不要把数据处理放到模型变更中
-        """
+        # migrations.RunPython(xxx) 不要把数据处理放到模型变更中
     ]

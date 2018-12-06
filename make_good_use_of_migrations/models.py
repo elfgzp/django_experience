@@ -1,4 +1,6 @@
 from django.db import models
+from django.dispatch.dispatcher import receiver
+from django.db.models.signals import pre_save
 
 
 # Create your models here.
@@ -18,3 +20,14 @@ class Book(models.Model):
     @classmethod
     def print_class_name(cls):
         print(cls.__name__)
+
+    def save(self, *args, **kwargs):
+        if not self.remark:
+            self.remark = 'This is a book.'
+
+
+@receiver(pre_save, sender=Book)
+def generate_book_remark(sender, instance, *args, **kwargs):
+    print(instance)
+    if not instance.remark:
+        instance.remark = 'This is a book.'
