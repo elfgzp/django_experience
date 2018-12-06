@@ -1,7 +1,8 @@
-# -*- coding: utf-8 -*-
-__author__ = 'gzp'
-
 from django.db import migrations
+
+"""
+make_good_use_of_migrations 是App的名字
+"""
 
 
 def init_book_data(apps, schema_editor):
@@ -16,6 +17,8 @@ class Migration(migrations.Migration):
     dependencies = [
         ('make_good_use_of_migrations', '0001_initial'),
     ]
+
+    # 这里要注意dependencies为上一次migrations的文件名称
 
     operations = [
         migrations.RunPython(init_book_data)
