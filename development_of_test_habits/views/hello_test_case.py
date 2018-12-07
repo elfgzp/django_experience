@@ -10,3 +10,4 @@ class HelloTestCase(APIView):
         return Response({
             'msg': 'Hello %s I am a test Case' % request.query_params.get('name', ',')
         })
+
