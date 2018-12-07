@@ -6,10 +6,6 @@ from django.test import TestCase
 
 class Demo(TestCase):
     def setUp(self):
-        """
-        在测试运行前会执行的
-        :return:
-        """
         pass
 
     def tearDown(self):
