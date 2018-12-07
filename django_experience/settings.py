@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'make_good_use_of_migrations'
+    'rest_framework',
+    'make_good_use_of_migrations',
+    'development_of_test_habits'
 ]
 
 MIDDLEWARE = [
@@ -114,8 +116,16 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Media files
+MEDIA_ROOT = 'media'
+
+MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+STATIC_ROOT = 'static'
+
 STATIC_URL = '/static/'
+
+
