@@ -6,14 +6,14 @@ from django.test import TestCase
 
 class Demo(TestCase):
     def setUp(self):
-        pass
+        print('setUp')
 
     def tearDown(self):
-        pass
+        print('tearDown')
 
     def test_demo(self):
-        pass
+        print('test_demo')
 
     def test_demo_2(self):
-        pass
+        print('test_demo2')
 
