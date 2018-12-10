@@ -15,12 +15,11 @@ class HelloTestCase(TestCase):
         # Input: print(resolve(url))
         # Output: ResolverMatch(func=development_of_test_habits.views.hello_test_case.HelloTestCase, args=(), kwargs={}, url_name=hello_test_case, app_names=[], namespaces=[])
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)  # 期望的Http相应码为200
         data = response.json()
-        self.assertEqual(data['msg'], 'Hello , I am a test Case')
+        self.assertEqual(data['msg'], 'Hello , I am a test Case')  # 期望的msg返回结果为'Hello , I am a test Case'
 
         response = self.client.get(url, {'name': self.name})
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 200)  # 期望的Http相应码为200
         data = response.json()
-        self.assertEqual(data['msg'], 'Hello Django I am a test Case')
-
+        self.assertEqual(data['msg'], 'Hello Django I am a test Case')  # 期望的msg返回结果为'Hello Django I am a test Case'
