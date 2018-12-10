@@ -33,8 +33,10 @@ class HomeWorkAPITestCase(TestCase):
         self.assertEqual(len(data), len(self.random_home_works))
 
         data_fields = [key for key in data[0].keys()]
+
         self.assertIn('school_name', data_fields)
         self.assertIn('class_name', data_fields)
         self.assertIn('student_name', data_fields)
+        self.assertIn('name', data_fields)
 
 
