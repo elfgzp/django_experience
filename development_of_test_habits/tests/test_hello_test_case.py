@@ -23,3 +23,9 @@ class HelloTestCase(TestCase):
         self.assertEqual(response.status_code, 200)  # 期望的Http相应码为200
         data = response.json()
         self.assertEqual(data['msg'], 'Hello Django I am a test Case')  # 期望的msg返回结果为'Hello Django I am a test Case'
+
+        # 假设我们要在接口中增加请求头'TEST_HEADER'
+        # 则在测试时需要加上前缀'HTTP_'最终的结果为'HTTP_TEST_HEADER'
+        response = self.client.get(url, **{'HTTP_TEST_HEADER': 'This is a test header.'})
+        data = response.json()
+        self.assertEqual(data['test_header'], 'This is a test header.')
