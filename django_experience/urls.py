@@ -20,5 +20,5 @@ import development_of_test_habits.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test_case/', include(development_of_test_habits.urls))
+    path('test_case/', include(development_of_test_habits.urls)),
 ]
