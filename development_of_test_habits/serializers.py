@@ -13,4 +13,4 @@ class HomeWorkSerializer(serializers.ModelSerializer):
 
     school_name = serializers.CharField(source='student_id.class_id.school_id.name', read_only=True)
     class_name = serializers.CharField(source='student_id.class_id.name', read_only=True)
-    student_name = serializers.CharField(source='student_id..name', read_only=True)
+    student_name = serializers.CharField(source='student_id.name', read_only=True)
