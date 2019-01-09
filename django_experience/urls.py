@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 
 import development_of_test_habits.urls
+import create_by.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('test_case/', include(development_of_test_habits.urls)),
+    path('', include(create_by.urls))
 ]
