@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'make_good_use_of_migrations',
     'development_of_test_habits',
-    'create_by'
+    'create_by',
+    'multidatabases',
 ]
 
 MIDDLEWARE = [
